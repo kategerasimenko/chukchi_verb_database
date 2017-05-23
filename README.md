@@ -8,5 +8,6 @@ This is a web-application for a Chukchi verb database.
 - lxml
 
 ## TO DO
-- Create more example docs for a database (in the `data` folder). Those existing now are just for test and do not reflect characteristics of real Chukchi verbs. 
+- Create more example docs for a database (in the `data` folder). Those existing now are just for test and do not reflect characteristics of real Chukchi verbs.
+- include real options for select fields
 - Think about backups
