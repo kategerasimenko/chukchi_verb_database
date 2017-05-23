@@ -1,0 +1,139 @@
+[ 
+   {
+        "word": "patək",
+        "middle_stem": "pat",
+        "responsible": "Naumov",
+        "comment": "frequently incorporates an object",
+        "transitivity": [
+            {
+                "value": "transitive",
+                "models": [
+                    {
+                        "actors": [
+                            {
+                                "role": "agent",
+                                "case": "INS"
+                            },
+                            {
+                                "role": "patient",
+                                "case": "NOM"
+                            }
+                        ],
+                        "example": "ɣapatɬen erʔet"
+                    },
+                    {
+                        "actors": [
+                            {
+                                "role": "agent",
+                                "case": "INS"
+                            },
+                            {
+                                "role": "patient",
+                                "case": "NOM"
+                            },
+                            {
+                                "role": "beneficiary",
+                                "case": "DAT"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "translations": [
+            {
+                "translation": "cook",
+                "example": "etʔəm waj nəpatqenat wenwakə"
+            }
+        ],
+        "action_class": "<ES, P>",
+        "ipf_example": "sajpatərkən",
+        "incorporation": [
+            {
+                "type": "object",
+                "compound": "ɣasajpatɬen",
+                "transitivity": {
+                    "value": "intransitive",
+                    "models": {
+                        "actors": {
+                            "role": "agent",
+                            "case": "NOM"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "object",
+                "compound": "ɣariɬqəpatɬen",
+                "transitivity": {
+                    "value": "intransitive"
+                }
+            }
+        ]
+    },
+    {
+        "word": "wak",
+        "middle_stem": "twa",
+        "responsible": "Stenin",
+        "comment": "serves as an auxiliary",
+        "transitivity": [
+            {
+                "value": "intransitive",
+                "models": [
+                    {
+                        "actors": {
+                            "role": "agent",
+                            "case": "NOM"
+                        },
+                        "example": "ŋeɬwəɬ nətwaqen ɣətɣəɣjet"
+                    }
+                ]
+            }
+        ],
+        "translations": [
+            {
+                "translation": "be",
+                "example": "emnuŋəcʔən miŋkəri nətwaqen?"
+            }
+        ],
+        "action_class": "<S, S>",
+        "pf_example": "mitʔeɬəɣi təɬanwə warkən ritɬʔu",
+        "ipf_example": "jaraken eɬɣərɣəʔətʔən ɣatwaɬen"
+    },
+    {
+        "word": "patəpɬətkuk",
+        "middle_stem": "patəpɬətku",
+        "responsible": "Naumov",
+        "transitivity": [
+            {
+                "value": "intransitive",
+                "models": [
+                    {
+                        "actors": [
+                            {
+                                "role": "agent",
+                                "case": "INS"
+                            },
+                            {
+                                "role": "patient",
+                                "case": "NOM",
+                                "animacy": "inanimate"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "translations": [
+            {
+                "translation": "finish cooking",
+                "example": "sajpatəpɬətkuɣʔi"
+            }
+        ],
+        "action_class": "<ES, —>",
+        "derivation_affix": "pɬətku",
+        "derivation_gloss": "COMPL",
+        "baseverb": 1
+    }    
+]
+

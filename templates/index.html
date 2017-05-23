@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="/static/index_functions.js"></script>
+    <link rel="stylesheet" type="text/css" href='/static/chukchi_database_index.css'>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,400i&amp;subset=cyrillic" rel="stylesheet">
+    <title>Глаголы чукотского языка</title>
+</head>
+<body>
+<div id="main">
+{% if not results %}
+<h1> База данных глаголов амгуэмского говора чукотского языка </h1>
+<a href="/add" type="button" class="to_forms" id="add">Добавить глагол</a>
+<a href="/search" type="button"  class="to_forms" id="search">Искать</a>
+<div id='confirm_menu' style="display:none">Вы точно хотите удалить глагол?
+<div class="confirm-buttons"><button type="button" onclick="delete_verb()" class="confirm-buttons" id="yes" name="delete" value=''>Да</button>
+<button type="button" onclick="$('#confirm_menu').hide()" class="confirm-buttons" id="no">Нет</button></div>
+</div>
+<div id="message"></div>
+<h2> Все глаголы </h2>
+<div id='search_div'><label>Быстрый поиск:</label><input type='text' name='search' id='search_as_you_type' autocomplete="off"></div>
+{% else %}
+<h1> Результаты поиска </h1>
+{% endif %}
+<ul>
+    {% for word in words %}
+    <li>
+		<a href="{{ url_for('view',verb_id = word[1]) }}" class="verb" type="button">{{ word[0] }}</a>
+        {% if not results %}
+		<form><button type="button" onclick="confirm_show({{ word[1] }})" id="confirm">Удалить</button></form>
+        {% endif %}
+	</li>
+    {% endfor %}
+</ul>
+</div>
+</body>
+</html>

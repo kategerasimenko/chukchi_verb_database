@@ -1,0 +1,121 @@
+{
+    "field_types": {
+        "example": "textarea",
+        "pf_example": "textarea",
+        "ipf_example": "textarea",
+        "comment": "textarea",
+        "baseverb": "select",
+        "animacy": "select",
+        "derivation_affix": "select-text",
+        "derivation_gloss": "select-text",
+        "value": "select",
+        "role": "select-text",
+        "case": "select-text",
+        "marker": "select",
+        "action_class": "select",
+        "type": "select",
+        "semantics": "textarea",
+        "derivatives": "a"
+    },
+
+    "blocks": [
+        [["word","middle_stem","responsible","comment"],"Основная информация"],
+        [["translations"],"Переводы"],
+        [["action_class","pf_example","ipf_example"],"Акциональность"],
+        [["derivatives"],"Дериваты"],
+        [["baseverb","derivation_affix","derivation_gloss"],"Деривация от"],
+        [["transitivity"],"Переходность и модели управления"],
+        [["antipassive"],"Антипассив"],
+        [["incorporation"],"Инкорпорация"]
+    ],
+    
+    "subblocks": {
+        "transitivity":"Переходность и модели управления",
+        "models":"Модели управления",
+        "actors":"Участники"
+    },
+
+    "order": {
+        "translations": ["translation","example"],
+        "transitivity": ["value","models"],
+        "models": ["actors","example"],
+        "actors": ["role","case","animacy"],
+        "antipassive": ["marker","transitivity"],
+        "incorporation": ["compound","type","semantics","transitivity"]
+    },
+    
+    "labels": {
+        "word": "Глагол",
+        "middle_stem": "Срединная основа",
+        "responsible": "Ответственный",
+        "comment": "Комментарий",
+        "value": "Переходность",
+        "case": "Падеж",
+        "role": "Семантическая роль",
+        "translation": "Перевод",
+        "example": "Пример",
+        "action_class": "Акциональный класс",
+        "pf_example": "Пример на перфективную форму",
+        "ipf_example": "Пример на имперфективную форму",
+        "marker": "Маркер",
+        "derivation_affix": "Маркер деривации",
+        "derivation_gloss": "Тип деривации (глосса)",
+        "baseverb": "Глагол",
+        "type": "Тип инкорпорации",
+        "compound": "Инкорпоративный комплекс",
+        "animacy": "Одушевленность"
+    },
+   
+    "choices": {
+        "value": ["transitive", "intransitive"],
+        "action_class": [
+            "<ES, P>",
+            "<ES P, P>",
+            "<ES, —>",
+            "<P, P>",
+            "<EP P, P>",
+            "<EP, P>",
+            "<EP P, P1 P2>",
+            "<EP ES P, P>",
+            "<S, S>",
+            "<ES S, S>",
+            "<ES, S>",
+            "<ES S, P>",
+            "<ES P S, P>",
+            "<ES S, P S>",
+            "<ES P S, P S>",
+            "<ES МР, МP>",
+            "<ES P МР, P МР>"
+        ],
+        "baseverb": [],
+        "derivation_affix": [],
+        "derivation_gloss": [],
+        "role": ["Agent", "Patient", "Beneficiary"],
+        "case": ["NOM", "INS", "DAT"],
+        "marker": ["ine-", "-tku-", "ine-, -tku-"],
+        "animacy": ["animate","inanimate"],
+        "type": [
+            "DO-verb",
+            "subject-verb",
+            "IO-verb",
+            "verb-verb",
+            "adverb-verb"
+        ]
+    },
+    
+    "choices_from_db": [
+        "baseverb",
+        "derivation_affix",
+        "derivation_gloss",
+        "role",
+        "case"
+    ],
+    
+    "buttons": [
+        "translations",
+        "transitivity",
+        "models",
+        "actors",
+        "incorporation"
+   ]
+}

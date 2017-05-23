@@ -1,0 +1,130 @@
+{
+    "mappings": {
+        "verb": {
+            "_all": {"enabled": true},
+            "dynamic": "strict",
+            "properties": {
+                "word": {
+                   "type": "keyword"
+                },
+                "middle_stem": {
+                   "type": "keyword"
+                },
+                "responsible": {
+                   "type": "keyword"
+                },
+                "comment": {
+                   "type": "keyword"
+                },
+                "transitivity": {
+                    "type": "nested",
+                    "properties": {
+                        "value": {
+                           "type": "keyword"
+                        },
+                        "models": {
+                            "type": "nested",
+                            "properties": {
+                                "example": {"type": "string"},
+                                "actors": {
+                                    "type": "nested",
+                                    "properties": {
+                                        "role": {"type": "keyword"},
+                                        "case": {"type": "keyword"},
+                                        "animacy": {"type": "keyword"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "translations": {
+                    "type": "nested",
+                    "properties": {
+                        "translation": {
+                           "type": "keyword"
+                        },
+                        "example": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "action_class": {
+                    "type": "keyword"
+                    },
+                "pf_example": {
+                    "type": "string"
+                    },
+                "ipf_example": {
+                    "type": "string"
+                },
+                "antipassive": {
+                    "type": "nested",
+                    "properties": {
+                        "marker": {
+                            "type": "keyword"
+                        },
+                        "transitivity": {
+                            "type": "nested",
+                            "properties": {
+                                "value": {
+                                   "type": "keyword"
+                                },
+                                "models": {
+                                    "type": "nested",
+                                    "properties": {
+                                        "example": {"type": "string"},
+                                        "actors": {
+                                            "type": "nested",
+                                            "properties": {
+                                                "role": {"type": "keyword"},
+                                                "case": {"type": "keyword"},
+                                                "animacy": {"type": "keyword"}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "derivation_affix": {"type": "keyword"},
+                "derivation_gloss": {"type": "keyword"},
+                "baseverb": {"type": "long"},
+                "incorporation": {
+                    "type": "nested",
+                    "properties": {
+                        "type": {
+                           "type": "keyword"
+                        },
+                        "compound": {
+                           "type": "keyword"
+                        },
+                        "transitivity": {
+                            "type": "nested",
+                            "properties": {
+                                "value": {
+                                   "type": "keyword"
+                                },
+                                "models": {
+                                    "type": "nested",
+                                    "properties": {
+                                        "example": {"type": "string"},
+                                        "actors": {
+                                            "type": "nested",
+                                            "properties": {
+                                                "role": {"type": "keyword"},
+                                                "case": {"type": "keyword"},
+                                                "animacy": {"type": "keyword"}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

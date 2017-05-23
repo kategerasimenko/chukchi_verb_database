@@ -1,0 +1,134 @@
+body {
+    font-family: Arial;
+}
+
+#main {
+    width: 70%;
+    margin:0 auto;
+    background: white;
+}
+
+h1 {
+    font-family: Noto Serif;
+    margin: 50px 0 0 0;
+    font-size: 26pt;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+h2 {
+    clear: both;
+    margin: 0;
+    padding-top: 30px;
+    font-family: Noto Serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 26px;
+}
+
+a {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    color: black;
+    display: block;
+    width: 70%;
+    margin: 2px 0 2px 0;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+a:hover {
+    background: #e1e8f0;
+}
+
+a:visited {
+    color: black;
+    outline: 0;
+    border: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+ul {
+    margin-top: 0;
+    list-style-type: none;
+    padding: 15px 0 0 0;
+}
+
+form {
+    padding: 2px 0 2px 0;
+}
+
+button {
+    height: 40px;
+    width: 80px;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    background-color: #8ca9cf;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+}
+
+button:hover {
+    background-color: #678dbf;
+}
+
+button:visited {
+    outline: 0;
+    border: 0;
+}
+
+
+.to_forms {
+    color: white;
+    background: green;
+    width: 45%;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.to_forms:hover {
+    background: yellow;
+}
+
+.to_forms:visited {
+    color: white;
+}
+
+#add {
+    background-color: #ea7e5d;
+}
+
+#search {
+    background-color: #b3c41b;
+}
+
+#confirm_menu {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+}
+
+#message {
+    clear: both;
+}
+
+.confirm-buttons {
+    margin-top: 5px;
+}
+
+#search_div {
+    padding: 20px 0 10px 20px;
+}
+
+label {
+    padding-right: 15px;
+}
