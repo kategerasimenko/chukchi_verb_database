@@ -1,4 +1,4 @@
-# chukchi_verb_database
+# Chukchi verb database
 
 This is a web-application for a Chukchi verb database.
 ## Requirements
@@ -9,10 +9,5 @@ This is a web-application for a Chukchi verb database.
 
 ## How to run
 1) run an Elasticsearch system
-2) run `indexator.py` in the `data` folder. This will load an index with the defined mapping and three example documents.
-2) in the command line, type `python new_app.py runserver` and the application will be launched.
-
-## TO DO
-- Create more example docs for a database (in the `data` folder). Those existing now are just for test and do not reflect characteristics of real Chukchi verbs.
-- include real options for select fields
-- Think about backups
+2) run `indexator.py` in the `data` folder. This will load an index with the defined mapping and four example documents.
+3) in the command line, type `python chukchi_verb_database.wsgi` and the application will be launched.
