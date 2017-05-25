@@ -1,6 +1,6 @@
 {
     "mappings": {
-        "verb": {
+        "chukchi_verb": {
             "_all": {"enabled": true},
             "dynamic": "strict",
             "properties": {

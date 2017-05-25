@@ -8,7 +8,7 @@ import json
 
 
 app = Flask(__name__)
-d = DBClient('verbs','verb')
+d = DBClient()
 hfp = HTMLFormParser()
 hb = HTMLBuilder()
 

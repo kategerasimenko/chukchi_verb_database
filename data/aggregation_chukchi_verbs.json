@@ -1,0 +1,170 @@
+[ 
+   {
+        "word": "patək",
+        "middle_stem": "pat",
+        "responsible": "Naumov",
+        "comment": "frequently incorporates an object",
+        "transitivity": [
+            {
+                "value": "переходный",
+                "models": {
+                    "actors": [
+                        {
+                            "role": "Агенс",
+                            "case": "INS",
+                            "animacy": "одушевленный"
+                        },
+                        {
+                            "role": "Пациенс",
+                            "case": "NOM",
+                            "animacy": "неодушевленный"
+                        }
+                    ],
+                    "example": "Vasya ɣapatɬen erʔet"
+                }
+            }
+        ],
+        "translations": [
+            {
+                "translation": "варить",
+                "example": "etʔəm waj nəpatqenat wenwakə"
+            }
+        ],
+        "action_class": "<ES P, P>",
+        "ipf_example": "sajpatərkən",
+        "incorporation": [
+            {
+                "type": "DO-verb",
+                "compound": "ɣasajpatɬen",
+                "transitivity": {
+                    "value": "непереходный",
+                    "models": {
+                        "actors": {
+                            "role": "Агенс",
+                            "case": "NOM",
+                            "animacy": "одушевленный"
+                        }
+                    }
+                }
+            },
+            {
+                "type": "DO-verb",
+                "compound": "ɣariɬqəpatɬen",
+                "transitivity": {
+                    "value": "непереходный"
+                }
+            }
+        ]
+    },
+    {
+        "word": "wak",
+        "middle_stem": "twa",
+        "responsible": "Stenin",
+        "comment": "serves as an auxiliary",
+        "transitivity": [
+            {
+                "value": "непереходный",
+                "models": [
+                    {
+                        "actors": {
+                            "role": "Тема",
+                            "case": "NOM"
+                        },
+                        "example": "ŋeɬwəɬ nətwaqen ɣətɣəɣjet"
+                    }
+                ]
+            }
+        ],
+        "translations": [
+            {
+                "translation": "быть",
+                "example": "emnuŋəsʔən miŋkəri nətwaqen?"
+            }
+        ],
+        "action_class": "<S, S>",
+        "pf_example": "jaraken eɬɣərɣəʔətʔən ɣatwaɬen",
+        "ipf_example": "mitʔeɬəɣi təɬanwə warkən ritɬʔu"
+    },
+    {
+        "word": "patəpɬətkuk",
+        "middle_stem": "patəpɬətku",
+        "responsible": "Naumov",
+        "transitivity": [
+            {
+                "value": "переходный",
+                "models": [
+                    {
+                        "actors": [
+                            {
+                                "role": "Агенс",
+                                "case": "INS",
+                                "animacy": "одушевленный"
+                            },
+                            {
+                                "role": "Пациенс",
+                                "case": "NOM",
+                                "animacy": "неодушевленный"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "translations": [
+            {
+                "translation": "сварить",
+                "example": "sajpatəpɬətkuɣʔi"
+            }
+        ],
+        "derivation_affix": "pɬətku",
+        "derivation_gloss": "COMPL",
+        "baseverb": 1
+    },
+    {
+        "word": "winretək",
+        "responsible": "Vinyar",
+        "comment": "labile",
+        "transitivity": [
+            {
+                "value": "переходный",
+                "models": {
+                    "actors": [
+                        {
+                            "role": "Агенс",
+                            "case": "INS",
+                            "animacy": "одушевленный"
+                        },
+                        {
+                            "role": "Бенефактив",
+                            "case": "NOM",
+                            "animacy": "одушевленный"
+                        }
+                    ],
+                    "example": "әtlәge winrennin ekәk"
+                }
+            },
+            {
+                "value": "непереходный",
+                "models": {
+                    "actors": [
+                        {
+                            "role": "Агенс",
+                            "case": "NOM",
+                            "animacy": "одушевленный"
+                        },
+                        {
+                            "role": "Бенефактив",
+                            "case": "ALL",
+                            "animacy": "одушевленный"
+                        }
+                    ],
+                    "example": "әtɬәgәn winretɣʔi akkagtә"
+                }
+            }
+        ],
+        "translations": {
+            "translation": "помогать"
+        }
+    }    
+]
+

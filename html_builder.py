@@ -5,7 +5,7 @@ from lxml import etree
 import json 
 import codecs
 
-d = DBClient('verbs','verb')
+d = DBClient()
 
 
 class HTMLBuilder(object):

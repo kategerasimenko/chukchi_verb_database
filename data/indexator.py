@@ -6,11 +6,12 @@ import json
 import codecs
 
 class Indexator(object):
-    def __init__(self,name,doctype):
+    def __init__(self):
         self.es = Elasticsearch()
         self.ic_es = IndicesClient(self.es)
-        self.name = name
-        self.doctype = doctype
+        settings = json.load(open('../settings.json',encoding='utf-8'))
+        self.name = settings['name']
+        self.doctype = settings['doctype']
         self.find_mapping()
         if self.ic_es.exists(index=self.name):
             self.delete_index()
@@ -42,10 +43,4 @@ class Indexator(object):
 
         
 if __name__ == '__main__':
-    idx = Indexator('verbs','verb')
-##    time.sleep(1)
-##    se = Search('verbs','verb')
-##    res = se.search('{"_source":["_id","word"],"query":{"match_all":{}}}')
-##    words = [{x['_source']['word']: '/'+se.name+'/'+se.doctype+'/'+str(x['_id'])} \
-##             for x in res]
-##    print(words)
+    idx = Indexator()

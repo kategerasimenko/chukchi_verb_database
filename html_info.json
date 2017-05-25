@@ -67,7 +67,7 @@
     },
    
     "choices": {
-        "value": ["transitive", "intransitive"],
+        "value": ["переходный", "непереходный"],
         "action_class": [
             "<ES, P>",
             "<ES P, P>",
@@ -90,10 +90,32 @@
         "baseverb": [],
         "derivation_affix": [],
         "derivation_gloss": [],
-        "role": ["Agent", "Patient", "Beneficiary"],
-        "case": ["NOM", "INS", "DAT"],
-        "marker": ["ine-", "-tku-", "ine-, -tku-"],
-        "animacy": ["animate","inanimate"],
+        "role": [
+            "∅",
+            "Агенс",
+            "Пациенс",
+            "Тема",
+            "Реципиент",
+            "Экспериенцер",
+            "Стимул",
+            "Адресат",
+            "Бенефактив",
+            "Инструмент",
+            "Цель",
+            "Источник",
+            "Место"
+        ],
+        "case": [
+            "∅",
+            "NOM",
+            "INS",
+            "ALL",
+            "ABL",
+            "LOC",
+            "сентенциальный"
+        ],
+        "marker": ["ine-", "-tku-"],
+        "animacy": ["одушевленный","неодушевленный"],
         "type": [
             "DO-verb",
             "subject-verb",

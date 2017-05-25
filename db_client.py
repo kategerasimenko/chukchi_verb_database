@@ -14,11 +14,12 @@ class DBClient(object):
     with the database through Python module 'elasticsearch'
     """
     
-    def __init__(self,name,doctype):
+    def __init__(self):
         self.es = Elasticsearch()
         self.ic_es = IndicesClient(self.es)
-        self.name = name
-        self.doctype = doctype
+        settings = json.load(open('settings.json',encoding='utf-8'))
+        self.name = settings['name']
+        self.doctype = settings['doctype']
 
 
     def search(self,query):
@@ -115,7 +116,7 @@ class DBClient(object):
         """
         create fields for html form (flat structure) for adding (empty)
         """
-        mapping = self.ic_es.get_mapping(index=self.name,doc_type=self.doctype)['verbs']['mappings']['verb']['properties']
+        mapping = self.ic_es.get_mapping(index=self.name,doc_type=self.doctype)[self.name]['mappings'][self.doctype]['properties']
         mapping = hfp.mapping_paths(mapping,paths=dict(),mode='empty_form')
         return mapping
 
@@ -124,7 +125,7 @@ class DBClient(object):
         """
         create fields for html form (flat structure) for updating (values from verb + missing values from mapping)
         """
-        mapping = self.ic_es.get_mapping(index=self.name,doc_type=self.doctype)['verbs']['mappings']['verb']['properties']
+        mapping = self.ic_es.get_mapping(index=self.name,doc_type=self.doctype)[self.name]['mappings'][self.doctype]['properties']
         m = hfp.mapping_paths(mapping,paths=dict(),mode='mapping') # get doc structure without types
         verb_info = self.get_info(verb_id) # get verb from the database
         if verb_info:
@@ -139,6 +140,6 @@ class DBClient(object):
         """
         create fields for html form (flat structure) for search (empty, without particular fields (example, derivatives))
         """
-        mapping = self.ic_es.get_mapping(index=self.name,doc_type=self.doctype)['verbs']['mappings']['verb']['properties']
+        mapping = self.ic_es.get_mapping(index=self.name,doc_type=self.doctype)[self.name]['mappings'][self.doctype]['properties']
         return hfp.mapping_paths(mapping,paths=dict(),mode='search')    
 
