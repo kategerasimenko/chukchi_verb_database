@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="icon" href='/static/icon.png' type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="/static/index_functions.js"></script>
     <link rel="stylesheet" type="text/css" href='/static/chukchi_database_index.css'>
@@ -27,7 +28,7 @@
 <ul>
     {% for word in words %}
     <li>
-		<a href="{{ url_for('view',verb_id = word[1]) }}" class="verb" type="button">{{ word[0] }}</a>
+		<a href="{{ url_for('view',word = word[0]) }}" class="verb" type="button">{{ word[0] }}</a>
         {% if not results %}
 		<form><button type="button" onclick="confirm_show({{ word[1] }})" id="confirm">Удалить</button></form>
         {% endif %}

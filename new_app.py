@@ -27,13 +27,15 @@ def list_of_verbs():
 def add():
     if request.method == 'POST':
         for_db = hfp.parse_form(dict(request.form))
+        d.add(for_db)
         return '{"result":"success"}'
     page = hb.create_html(d.empty_form_fields(), mode='add')
     return page
 
 
-@app.route('/<int:verb_id>/edit',methods=['GET','POST'])
-def update(verb_id):
+@app.route('/<word>/edit',methods=['GET','POST'])
+def update(word):
+    verb_id = d.id_from_word(word)
     if request.method == 'POST':
         for_db = hfp.parse_form(dict(request.form))
         d.update(verb_id,for_db)
@@ -46,11 +48,12 @@ def update(verb_id):
         return ''
 
         
-@app.route('/<int:verb_id>')
-def view(verb_id):
+@app.route('/<word>')
+def view(word):
+    verb_id = d.id_from_word(word)
     f = d.fields_for_edit(verb_id)
     if f:
-        page = hb.create_html(f,mode='view',verb_id=str(verb_id))
+        page = hb.create_html(f,mode='view',verb_id=word)
         return page
     else:
         return ''

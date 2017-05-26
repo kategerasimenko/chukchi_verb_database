@@ -39,6 +39,10 @@ class DBClient(object):
         script = json.dumps({'doc':query})
         self.es.update(index=self.name,doc_type=self.doctype,id=verb_id,body=script)
 
+    def id_from_word(self,word):
+        verb_id = self.search('{"_source":["_id"],"query":{"bool":{"filter":{"term":{"word":"'+word+'"}}}}}')[0]['_id']
+        return verb_id
+
     def all_words(self):
         """
         get list of words with their ids from the database
