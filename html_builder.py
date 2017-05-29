@@ -119,7 +119,7 @@ class HTMLBuilder(object):
                     if field_type == 'a': # only for derivatives
                         if value:
                             for deriv in value:
-                                one_d = etree.Element('a',href='/'+str(deriv[1])) # create links
+                                one_d = etree.Element('a',href='/'+str(deriv[0])) # create links
                                 one_d.text = deriv[0]
                                 root.append(one_d)
                         continue
