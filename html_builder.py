@@ -131,7 +131,7 @@ class HTMLBuilder(object):
                     if mode == 'view': # for view - only text information, no forms
                         if type(value) == tuple: # if a baseverb - value in format (verb,id)
                             if value:
-                                info_span = etree.Element('a',href='/'+str(value[1]))
+                                info_span = etree.Element('a',href='/'+str(value[0]))
                                 info_span.text = value[0]
                             else: # can be empty - the baseverb has been deleted
                                 info_span = etree.Element('span')
