@@ -28,7 +28,7 @@ class DBClient(object):
 
 
     def add(self,query):
-        id_needed = max([int(x["_id"]) for x in self.search('{"_source":"_id","query":{"match_all":{}}}')]) + 1 #find id
+        id_needed = max([int(x["_id"]) for x in self.search('{"_source":"_id","query":{"match_all":{}},"size":1000}')]) + 1 #find id
         self.es.index(index=self.name,doc_type=self.doctype,id=id_needed,body=query)
 
     def delete(self,verb_id):
@@ -47,7 +47,7 @@ class DBClient(object):
         """
         get list of words with their ids from the database
         """
-        words = self.search('{"_source":["_id","word"],"query":{"match_all":{}}}')
+        words = self.search('{"_source":["_id","word"],"query":{"match_all":{}},"size":1000}')
         words = sorted([(x['_source']['word'],x['_id']) for x in words],key=lambda x: x[0])
         return words
 
@@ -56,7 +56,7 @@ class DBClient(object):
         """
         get list of all derivation markers/glosses encountered in the database
         """
-        words = self.search('{"_source":["'+to_search+'"],"query":{"match_all":{}}}')
+        words = self.search('{"_source":["'+to_search+'"],"query":{"match_all":{}},"size":1000}')
         words = sorted(list({x['_source'][to_search] for x in words if x['_source']}))
         return words
 
@@ -66,7 +66,7 @@ class DBClient(object):
         """
         res = []
         for path in paths:
-            words = self.search('{"_source":["'+path+'"],"query":{"match_all":{}}}')
+            words = self.search('{"_source":["'+path+'"],"query":{"match_all":{}},"size":1000}')
             for word in words:
                 res += self.get_leaves(word,field,[])
         return set(res)
